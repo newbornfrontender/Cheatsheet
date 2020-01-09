@@ -23,8 +23,12 @@ const movable = Category => class extends Category {
 // Usage
 
 const PointEx = serializable(movable(Point));
-const point1 = new PointEx(10, 20);
-point1.move(5, -2);
+const point1 = new PointEx(0, 0);
+
+point1.move(6, -4);
 console.log(point1.toString());
+point1.move(5, 3);
+console.log(point1.toString());
+
 const { x, y } = point1;
 console.log(x, y);
